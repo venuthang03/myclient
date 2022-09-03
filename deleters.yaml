@@ -1,0 +1,52 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  annotations:
+    deployment.kubernetes.io/desired-replicas: "1"
+    deployment.kubernetes.io/max-replicas: "2"
+    deployment.kubernetes.io/revision: "2"
+  creationTimestamp: "2022-08-30T21:31:46Z"
+  generation: 1
+  labels:
+    app: mybackend
+    pod-template-hash: 5fbd867fdd
+  name: mybackend-5fbd867fdd
+  namespace: default
+  ownerReferences:
+  - apiVersion: apps/v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: Deployment
+    name: mybackend
+    uid: 417fbea2-b675-447c-83e7-336f867b1daf
+  resourceVersion: "3705"
+  uid: c1fbaec7-9bad-4eee-86d1-2f1012375e20
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mybackend
+      pod-template-hash: 5fbd867fdd
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: mybackend
+        pod-template-hash: 5fbd867fdd
+    spec:
+      containers:
+      - image: kaizenvenz/mybackend
+        imagePullPolicy: IfNotPresent
+        name: mybackend
+        resources: {}
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+      dnsPolicy: ClusterFirst
+      restartPolicy: Never
+      schedulerName: default-scheduler
+      securityContext: {}
+      terminationGracePeriodSeconds: 30
+status:
+  fullyLabeledReplicas: 1
+  observedGeneration: 1
+  replicas: 1

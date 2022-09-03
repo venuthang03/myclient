@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: myclient
+  name: myclient
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: myclient
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: myclient
+    spec:
+      containers:
+      - image: CONTAINER_IMAGE
+        name: myclient
+        resources: {}
+status: {}
