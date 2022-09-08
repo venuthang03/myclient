@@ -5,7 +5,7 @@
 FROM node:12.7-alpine AS build
 WORKDIR /usr/src/app
 COPY package.json package-lock.json ./
-RUN npm install
+###RUN npm install
 COPY . .
 RUN rm -rf node_modules
 RUN npm install
