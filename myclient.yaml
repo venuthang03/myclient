@@ -20,7 +20,10 @@ spec:
       containers:
       - image: CONTAINER_IMAGE
         name: myclient
-        resources: {}
+        resources:
+            requests:
+              cpu: 1
+              memory: 1Gi
         securityContext:
           allowPrivilegeEscalation: false
 status: {}
