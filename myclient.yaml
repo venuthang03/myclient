@@ -21,9 +21,7 @@ spec:
       - image: CONTAINER_IMAGE
         name: myclient
         resources:
-            requests:
-              cpu: 1
-              memory: 1Gi
+            
         securityContext:
           allowPrivilegeEscalation: false
 status: {}
