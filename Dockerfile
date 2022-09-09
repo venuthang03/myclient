@@ -2,6 +2,7 @@
 ## step1 : to run the build
 ## step2 : to stage it on top of nginx as proxy server 
 ### STAGE 1: Build ###
+## using base image
 FROM node:12.7-alpine AS build
 WORKDIR /usr/src/app
 COPY package.json package-lock.json ./
