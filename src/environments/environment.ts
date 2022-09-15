@@ -8,7 +8,7 @@ export const environment = {
   //apiUrl: 'http://a19db6af7f9dd4a0c9e5b473da1589d5-1110728067.us-east-2.elb.amazonaws.com/api/v1/',
   //apiUrl: 'http://localhost:5000/api/v1/',
   //  apiUrl: 'http://ab60894c94d254d39a4feb308ef41696-ed0f0723f17113df.elb.us-east-2.amazonaws.com/api/v1/'
-  //apiUrl:'https://ddiwmzm12nspr.cloudfront.net/api/v1/'
+  apiUrl:'https://ddiwmzm12nspr.cloudfront.net/api/v1/',
   apiUrl:'https://lr8ivztjmd.execute-api.us-east-2.amazonaws.com/api/v1/'
 };
 
