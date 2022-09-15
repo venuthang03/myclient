@@ -21,6 +21,10 @@ spec:
       - image: CONTAINER_IMAGE
         name: myclient
         resources:
+          limits:
+            cpu: 500m
+          requests:
+            cpu: 200m
             
         securityContext:
           allowPrivilegeEscalation: false
