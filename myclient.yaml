@@ -3,23 +3,23 @@ kind: Deployment
 metadata:
   creationTimestamp: null
   labels:
-    app: myclient
-  name: myclient
+    app: ui
+  name: ui
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: myclient
+      app: ui
   strategy: {}
   template:
     metadata:
       creationTimestamp: null
       labels:
-        app: myclient
+        app: ui
     spec:
       containers:
       - image: CONTAINER_IMAGE
-        name: myclient
+        name: ui
         resources:
           limits:
             cpu: 500m
